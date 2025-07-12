@@ -3,6 +3,7 @@ package com.hirbod.TestingProducts;
 import java.io.*;
 
 public class TestProd {
+    //writing to a file
     public static void writeToFile(){
         String[] names = {"carl", "John", "Mike"};
         try {
@@ -18,6 +19,7 @@ public class TestProd {
         }
     }
 
+    //reading from a file
     public static void readFromFile(){
         try {
         BufferedReader reader = new BufferedReader(new FileReader("OutPutFile.txt"));

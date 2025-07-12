@@ -1,7 +1,8 @@
 package com.hirbod.practice;
 import com.hirbod.utils.Utilities; //first put package name then the class
 import static com.hirbod.TestingProducts.TestProd.writeToFile;
-import static com.hirbod.TestingProducts.TestProd.readFromFile;
+import static com.hirbod.TestingProducts.TestProd.readFromFile; // we only need to import the packages and methods
+                                                                // that we will be using here
 
 
 public class Main {
