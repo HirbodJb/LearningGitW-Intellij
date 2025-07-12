@@ -21,11 +21,26 @@ public class TestProd {
 
     //reading from a file
     public static void readFromFile(){
+        String searchText = "carl";
         try {
         BufferedReader reader = new BufferedReader(new FileReader("OutPutFile.txt"));
         String line;
+        int lineNumber = 0;
+        int foundLine = 0;
+        boolean found = false;
         while((line = reader.readLine()) != null) {
+            lineNumber++;
             System.out.println(line);
+            if (line.contains(searchText)){
+                found = true;
+                foundLine = lineNumber;
+            }
+        }
+        if(found){
+            System.out.println("Found - " + searchText + " - on Line " + foundLine);
+        }
+        else {
+            System.out.println(searchText + " - is not in the file");
         }
         reader.close();
     } catch (IOException e){
